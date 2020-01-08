@@ -174,10 +174,12 @@
 
 /* Header Dark
 -----------------------------*/
+.header-dark {
+	background: rgba($white, 1);
+}
 @include up-md {
 	.header-dark {
 		padding: 0;
-		background: rgba($white, 0.72);
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -211,56 +213,11 @@
 	}
 }
 
-/* Header Dark
------------------------------*/
-@include up-md {
-	.header-white {
-		padding: 0;
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
-		z-index: 5;
-		.fixed-header & {
-			background: $white;
-		}
-		.navbar-brand {
-			font-weight: 600;
-			font-size: 24px;
-			text-transform: uppercase;
-			color: $white;
-			.fixed-header & {
-				color: $dark;
-			}
-		}
-		.navbar-nav {
-			.nav-link {
-				line-height: 60px;
-			    padding: 0 10px !important;
-			    font-size: 13px;
-			    font-weight: 500;
-			    text-transform: uppercase;
-			    letter-spacing: 0.035rem;
-			    color: rgba($white, 0.7);
-			    margin-left: 10px;
-			    .fixed-header & {
-			    	color: $dark;
-			    }
-			    &.active,
-			    &:hover {
-			    	color: $white;
-			    	.fixed-header & {
-			    		color: $primaryColor;
-			    	}
-			    }
-			}
-		}
-	}
-}
 
 
 /* Mobile 
 -----------------------------*/
+
 @include down-md {
 	.header-nav {
 	    position: fixed;

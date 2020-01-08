@@ -1,9 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 @import '~node_modules/bootstrap/scss/bootstrap';
 @import '~font-awesome/css/font-awesome.css';
 
 @import "variable";
 @import "mixin";
+@import "common";
 
 body{
     font: normal 14px $baseFont; 
@@ -21,6 +23,10 @@ img{
             @media #{$mobile-480}{
                         margin: 0;
                     }
+            .profile-pic {
+                border: 14px solid $white;
+                border-radius: 5px;
+            }
         }
         .basic-info{
             margin: 0 0 30px;
@@ -166,7 +172,7 @@ img{
             .progress{
                 height: 14px;
                 border-radius: 0;
-                background: #b4e1e6;
+                background: $gray;
                 box-shadow: none;
                 .progress-bar{
                     height: 14px;
@@ -187,6 +193,10 @@ img{
         /*Education Section*/
         .experience-section{
             background: #fbfbfb;
+            a{
+                color: $dark;
+                text-decoration: underline;
+            }
         }
 
         /*info-content*/
@@ -204,6 +214,7 @@ img{
                 left: -150px;
                 text-align: right;
                 width: 130px;
+                top: 22px;
                 &:after{
                     content: '';
                     width: 10px;
@@ -212,7 +223,7 @@ img{
                     background: $primaryColor;
                     position: absolute;
                     right: -24px;
-                    top: 4px;
+                    top: 0;
                 }
             }
             ul{
